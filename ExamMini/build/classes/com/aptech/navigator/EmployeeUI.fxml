@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="835.0" prefWidth="1219.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aptech.controller.EmployeeController">
+   <children>
+      <Text layoutX="448.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee" textAlignment="CENTER" wrappingWidth="276.6708984375">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="192.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="192.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <Text layoutX="178.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="67.76513671875" />
+      <Text layoutX="172.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" />
+      <JFXTextField fx:id="txtName" layoutX="401.0" layoutY="64.0" prefHeight="31.0" prefWidth="305.0" />
+      <JFXTextField fx:id="txtPrice" layoutX="401.0" layoutY="111.0" prefHeight="31.0" prefWidth="305.0" />
+      <JFXTextField fx:id="txtAddress" layoutX="401.0" layoutY="159.0" prefHeight="31.0" prefWidth="305.0" />
+      <JFXComboBox fx:id="cbDepartment" layoutX="401.0" layoutY="202.0" prefHeight="31.0" prefWidth="305.0" />
+      <Text layoutX="290.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="79.44577813148499" />
+      <JFXTextField fx:id="txtSearch" layoutX="401.0" layoutY="313.0" prefHeight="31.0" prefWidth="222.0" />
+      <JFXButton fx:id="btnSearch" layoutX="660.0" layoutY="329.0" onAction="#btnSearchClick" prefHeight="31.0" prefWidth="79.0" text="Search" />
+      <TableView fx:id="tvEmployee" layoutX="67.0" layoutY="405.0" prefHeight="417.0" prefWidth="1095.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="99.0" text="ID" />
+          <TableColumn fx:id="tcName" prefWidth="261.0" text="Name" />
+            <TableColumn fx:id="tcPrice" prefWidth="223.0" text="Price" />
+            <TableColumn fx:id="tcAddress" prefWidth="302.0" text="Address" />
+            <TableColumn fx:id="tcDepartment" prefWidth="209.0" text="Department" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAdd" layoutX="232.0" layoutY="268.0" onAction="#btnAddClick" text="Add" />
+      <JFXButton fx:id="btnEdit" layoutX="489.0" layoutY="268.0" onAction="#btnEditClick" text="Edit" />
+      <JFXButton fx:id="btnDelete" layoutX="725.0" layoutY="268.0" onAction="#btnDeleteClick" text="Delete" />
+   </children>
+</AnchorPane>
